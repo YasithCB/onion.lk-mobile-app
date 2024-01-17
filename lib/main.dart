@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:user_mobile/ui/screens/sign_in_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -13,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Onion.lk',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(216, 255, 212, 42),
+        ),
         useMaterial3: true,
       ),
-      home: CircularProgressIndicator(),
+      home: const SignInScreen(),
     );
   }
 }
